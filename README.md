@@ -1,2 +1,2 @@
 # odin-recipes
-A simple recipe web app
+A simple recipe website
