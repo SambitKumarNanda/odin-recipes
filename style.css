@@ -10,8 +10,10 @@ body{
 }
 
 .header{
+    width: 114rem;
     height: 100vh;
     position: relative;
+    /* margin-bottom: 30rem; */
 }
 
 .header__text{
@@ -24,7 +26,7 @@ body{
 }
 
 .text{
-    font-size: 5.2rem;
+    font-size: 5.6rem;
     color: #d8cfc9;
     font-weight: bold;
     text-transform: capitalize;
@@ -49,7 +51,7 @@ body{
 .btn-link:visited{
     display: inline-block;
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 1.6rem;
     text-transform: uppercase;
     font-weight: 400;
     padding: 1rem 3.5rem;
@@ -70,4 +72,25 @@ body{
     transform: translateY(0);
     background-color: #8e7a6c;
     box-shadow: 1rem 2.5rem 2rem rgba(0,0,0,0.15);
+}
+
+.recipe-section{
+    width: 80rem;
+    background-color: peachpuff;
+    padding: 30rem 0;
+}
+
+.grid-container{
+    margin:0 auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.container{
+}
+
+.recipe-card{
+    background-color: peru;
+    width: 5rem;
+    height: 5rem;
 }
