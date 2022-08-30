@@ -10,7 +10,7 @@ body{
 }
 
 .header{
-    width: 114rem;
+    max-width: 114rem;
     height: 100vh;
     position: relative;
     /* margin-bottom: 30rem; */
@@ -37,7 +37,7 @@ body{
     height: 100%;
     background-image: linear-gradient(to right,rgba(79, 68, 60,.7),rgba(95, 82, 72,.3)), url(./images/header-img.jpg);
     background-size: cover;
-    background-position-x: left 15rem;
+    /* background-position-x: left 15rem; */
     /* margin-bottom:20rem; */
 }
 
@@ -75,21 +75,32 @@ body{
 }
 
 .recipe-section{
-    width: 80rem;
+    width: 114rem;
     background-color: peachpuff;
-    padding: 30rem 0;
+    padding: 0 3rem;
+}
+
+.container{
+    width: 80rem;
+    margin: 0 auto;
+    
+}
+
+.recipe-section-heading{
+    font-size: 2.4rem;
+    text-align: center;
+}
+
+.underline{
+    display: inline;
+    border-bottom: 2px solid #8e7a6c;
 }
 
 .grid-container{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-
-    align-items: center;
-    justify-content: center;
 }
 
-.container{
-}
 
 .recipe-card{
     background-color: peru;
