@@ -76,8 +76,8 @@ body{
 
 .recipe-section{
     width: 114rem;
-    background-color: peachpuff;
-    padding: 0 3rem;
+    background-color:rgb(248, 229, 213);
+    padding: 3.2rem 3rem;
 }
 
 .container{
@@ -87,23 +87,43 @@ body{
 }
 
 .recipe-section-heading{
-    font-size: 2.4rem;
+    font-size: 3.2rem;
     text-align: center;
+    color: #7e6d60;
 }
 
 .underline{
-    display: inline;
+    margin-top: 1.5rem;
+    margin-bottom: 5rem;
     border-bottom: 2px solid #8e7a6c;
 }
 
 .grid-container{
     display: grid;
     grid-template-columns: repeat(3,1fr);
+    gap: 2rem
 }
 
+.recipe-card__image{
+    border-radius: 5px;
+    overflow: hidden;
+}
 
-.recipe-card{
-    background-color: peru;
-    width: 5rem;
-    height: 5rem;
+.recipe-card__image:hover img{
+    transform: scale(1.2);
+    background-image: rgba(0, 0, 0,.4);
+}
+
+.recipe-card__image::after{
+    content: 'creamy white chilli';
+    display: inline-block;
+    color: #fff;
+}
+
+.img-recipe{
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+
+    transition: all .3s;
 }
