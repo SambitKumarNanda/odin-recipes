@@ -107,17 +107,43 @@ body{
 .recipe-card__image{
     border-radius: 5px;
     overflow: hidden;
+
+    position: relative;
 }
 
 .recipe-card__image:hover img{
     transform: scale(1.2);
     background-image: rgba(0, 0, 0,.4);
+
+    backdrop-filter: blur(10px);
+    filter: blur(4px);
 }
 
 .recipe-card__image::after{
     content: 'creamy white chilli';
     display: inline-block;
-    color: #fff;
+    color:black;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 600;
+
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    opacity: 100;
+    visibility: visible;
+
+}
+
+.recipe-card__image:hover .recipe-card__image::after{
+    
+
+    opacity: 0;
+    visibility: hidden;
+
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); */
 }
 
 .img-recipe{
