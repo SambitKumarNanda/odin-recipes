@@ -7,6 +7,9 @@
 body{
     font-size: 62.5%;
     font-family: 'Merriweather',sans-serif;
+    
+
+    scroll-behavior: smooth;
 }
 
 .header{
@@ -78,6 +81,8 @@ body{
     width: 114rem;
     background-color:rgb(248, 229, 213);
     padding: 3.2rem 3rem;
+
+    position: relative;
 }
 
 .container{
@@ -101,17 +106,20 @@ body{
 .grid-container{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 2rem
+    column-gap: 2rem;
+    row-gap: 2.5rem;
 }
 
-.recipe-card__image{
+.recipe-card__image1,
+.recipe-card__image2,
+.recipe-card__image3{
     border-radius: 5px;
     overflow: hidden;
 
     position: relative;
 }
 
-.recipe-card__image:hover img{
+.recipe-card__image1:hover img{
     transform: scale(1.2);
     background-image: rgba(0, 0, 0,.4);
 
@@ -119,31 +127,95 @@ body{
     filter: blur(4px);
 }
 
-.recipe-card__image::after{
+.recipe-card__image2:hover img{
+    transform: scale(1.2);
+    background-image: rgba(0, 0, 0,.4);
+
+    backdrop-filter: blur(10px);
+    filter: blur(4px);
+}
+
+.recipe-card__image3:hover img{
+    transform: scale(1.2);
+    background-image: rgba(0, 0, 0,.4);
+
+    backdrop-filter: blur(10px);
+    filter: blur(4px);
+}
+
+.recipe-card__image1::after{
     content: 'creamy white chilli';
     display: inline-block;
-    color:black;
-    font-size: 1.4rem;
+    color:#e7e7e7;
+    font-size: 1.8rem;
     text-transform: uppercase;
     font-weight: 600;
 
     position: absolute;
     bottom: 0;
     left: 10%;
-    opacity: 100;
-    visibility: visible;
-
-}
-
-.recipe-card__image:hover .recipe-card__image::after{
-    
-
     opacity: 0;
     visibility: hidden;
 
-    /* top: 50%;
+}
+
+.recipe-card__image1:hover:after{
+    opacity: 100;
+    visibility: visible;
+
+    top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%); */
+    transform: translate(-50%,-50%);
+}
+
+.recipe-card__image2::after{
+    content: 'banana bread';
+    display: inline-block;
+    color:#e7e7e7;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    opacity: 0;
+    visibility: hidden;
+
+}
+
+.recipe-card__image2:hover:after{
+    opacity: 100;
+    visibility: visible;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.recipe-card__image3::after{
+    content: 'cheeseburger soup';
+    display: inline-block;
+    color:#e7e7e7;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    opacity: 0;
+    visibility: hidden;
+
+}
+
+.recipe-card__image3:hover:after{
+    opacity: 100;
+    visibility: visible;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 
 .img-recipe{
@@ -152,4 +224,14 @@ body{
     object-fit: cover;
 
     transition: all .3s;
+}
+
+.offset{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0,.65);
+    z-index: 10;
 }
