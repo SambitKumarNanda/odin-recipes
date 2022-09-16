@@ -248,3 +248,53 @@ body{
     grid-template-columns: repeat(2,1fr);
     column-gap: 3rem;
 }
+
+.recipe-description-container{
+    width: 80%;
+}
+
+.recipe-heading{
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.desctiption{
+    font-size: 1rem;
+}
+
+.recipe-making-container{
+    font-size: 1.4rem;
+}
+
+.cooking-steps{}
+
+.list{
+    margin-bottom: 1rem;
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.item-info{
+    display: flex;
+    align-items: center;
+}
+
+.icon-preparation-time{
+    width: 25px;
+    height: 25px;
+    padding:5px;
+    color: #FFC964;
+    margin-right: 5px;
+}
+
+.icon-serving{
+    width:30px;
+    height: 30px;
+    padding:5px;
+    filter:invert(96%) sepia(37%) saturate(2843%) hue-rotate(310deg) brightness(103%) contrast(103%);
+    margin-right: 5px;
+}
